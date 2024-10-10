@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    {% block stylesheets %}
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f8f9fa;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            h1 {
+                color: #343a40;
+            }
+        </style>
+    {% endblock %}
+
+    {% block javascripts %}
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <h1>Nothing here, Surely</h1>
+    <p>This is an API for a Geometry backend.</p>
+    <p>We are doing this while Tekking Juice 🧃 ,here is the <a href="https://github.com/isophel/TekJuice.git">project repository</a></p>
+    <img src="{{ asset('images/humor.gif') }}" alt="Dev Humor GIF" />
+{% endblock %}
+</body>
+</html>

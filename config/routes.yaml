@@ -1,5 +1,27 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource: ../src/Controller/
+  type: attribute
+
+circle:
+  path: /circle/{radius}
+  controller: App\Controller\GeometryController::circle
+  methods: [ 'GET' ]
+
+triangle:
+  path: /triangle/{a}/{b}/{c}
+  controller: App\Controller\GeometryController::triangle
+  methods: [ 'GET' ]
+
+sum_of_areas:
+  path: /sum/areas
+  controller: App\Controller\GeometryController::sumAreas
+  methods: [ 'GET' ]
+
+sum_of_diameters:
+  path: /sum/diameters
+  controller: App\Controller\GeometryController::sumDiameters
+  methods: [ 'GET' ]
+
+index:
+  path: /
+  controller: App\Controller\GeometryController::index
